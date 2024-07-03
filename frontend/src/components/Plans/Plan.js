@@ -1,6 +1,6 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const tiers = [
   {
     name: "Free",
@@ -112,7 +112,7 @@ export default function Plans() {
                   {tier.price}
                 </span>
               </p>
-              <a
+              <button
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular
@@ -122,11 +122,8 @@ export default function Plans() {
                 )}
               >
                 Buy plan
-              </a>
-              <ul
-                role="list"
-                className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10"
-              >
+              </button>
+              <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
                     <CheckIcon

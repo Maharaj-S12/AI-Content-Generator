@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CheckoutForm from "./components/StripePayment/CheckoutForm";
 import PaymentSuccess from "./components/StripePayment/PaymentSuccess";
@@ -65,14 +64,7 @@ export default function App() {
               </AuthRoute>
             }
           />
-          <Route
-            path="/success"
-            element={
-              <AuthRoute>
-                <PaymentSuccess />
-              </AuthRoute>
-            }
-          />
+          <Route path="/success" element={<PaymentSuccess />} />
 
           <Route path="/history" element={<ContentGenerationHistory />} />
           <Route path="/history/:id" element={<HistoryDetails />} />

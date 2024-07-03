@@ -3,7 +3,7 @@ import axios from "axios";
 //Registration
 export const registerAPI = async (userData) => {
   const response = await axios.post(
-    "http://localhost:5000/api/v1/users/register",
+    "https://ai-content-generator-05pu.onrender.com/api/v1/users/register",
     {
       email: userData?.email,
       password: userData?.password,
@@ -18,7 +18,7 @@ export const registerAPI = async (userData) => {
 //Login
 export const loginAPI = async (userData) => {
   const response = await axios.post(
-    "http://localhost:5000/api/v1/users/login",
+    "https://ai-content-generator-05pu.onrender.com/api/v1/users/login",
     {
       email: userData?.email,
       password: userData?.password,
@@ -32,7 +32,7 @@ export const loginAPI = async (userData) => {
 //check auth
 export const checkUserAuthStatusAPI = async () => {
   const response = await axios.get(
-    "http://localhost:5000/api/v1/users/auth/check/",
+    "https://ai-content-generator-05pu.onrender.com/api/v1/users/auth/check/",
 
     {
       withCredentials: true,
@@ -43,7 +43,7 @@ export const checkUserAuthStatusAPI = async () => {
 //logout
 export const logoutAPI = async () => {
   const response = await axios.post(
-    "http://localhost:5000/api/v1/users/logout",
+    "https://ai-content-generator-05pu.onrender.com/api/v1/users/logout",
     {},
 
     {
@@ -55,7 +55,7 @@ export const logoutAPI = async () => {
 //User Profile
 export const getUserProfileAPI = async () => {
   const response = await axios.get(
-    "http://localhost:5000/api/v1/users/profile",
+    "https://ai-content-generator-05pu.onrender.com/api/v1/users/profile",
 
     {
       withCredentials: true,

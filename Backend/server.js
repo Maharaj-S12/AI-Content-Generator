@@ -92,10 +92,16 @@ corn.schedule("0 0 1 * * *", async () => {
 //--middlewares----
 app.use(express.json());
 app.use(cookieParser());
+// const corsOptions = {
+//   origin: "https://frontend-nffbwgcun-maharaj-projects.vercel.app/",
+
+//   credentials: true,
+// };
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://frontend-67kjny214-maharaj-projects.vercel.app/", // Update this to your frontend URL
   credentials: true,
 };
+
 app.use(cors(corsOptions));
 //----Routes-----
 app.use("/api/v1/users", usersRouter);

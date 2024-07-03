@@ -19,17 +19,14 @@ const validationSchema = Yup.object({
 
 const Registration = () => {
   //custom auth hook
-  const { isAuthenticated, login } = useAuth();
+  const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
   //Redirect if a user is logged in
-  useEffect(
-    () => {
-      if (isAuthenticated) {
-        navigate("/dashboard");
-      }
-    },
-    { isAuthenticated }
-  );
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/dashboard");
+    }
+  }, [navigate, isAuthenticated]);
   //mutation
   const mutation = useMutation({ mutationFn: registerAPI });
   // Formik setup for form handling

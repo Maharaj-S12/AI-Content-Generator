@@ -41,7 +41,7 @@ const CheckoutForm = () => {
       };
       //Make the http request
       mutation.mutate(data);
-
+      console.log(data);
       if (mutation?.isSuccess) {
         const { error } = await stripe.confirmPayment({
           elements,

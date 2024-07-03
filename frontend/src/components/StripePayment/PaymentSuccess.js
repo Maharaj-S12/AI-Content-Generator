@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -15,10 +15,10 @@ const PaymentSuccess = () => {
 
   // Usequery
 
-  const { isLoading, isError, data, isPending, isSuccess } = useQuery({
+  const { isLoading, isError, data } = useQuery({
     queryFn: () => verifyPaymentAPI(paymentIntentID),
   });
-
+  console.log(data);
   return (
     <div className="max-w-lg mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
       {isLoading ? (
