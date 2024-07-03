@@ -98,7 +98,7 @@ app.use(cookieParser());
 //   credentials: true,
 // };
 const corsOptions = {
-  origin: "https://frontend-67kjny214-maharaj-projects.vercel.app/", // Update this to your frontend URL
+  origin: "https://frontend-io25o5zn4-maharaj-projects.vercel.app", // Update this to your frontend URL
   credentials: true,
 };
 
